@@ -1,0 +1,31 @@
+{% extends 'vehicle/base.html' %}
+{% block title %}Contactus
+{% endblock title %}
+<div class="container-fluid mb-3">
+    {% block body %} <img src="https://source.unsplash.com/1200x400/?phone,contact" class="d-block w-100 " alt="...">
+</div>
+<div class="container mb-3">
+    <h2 class="text-center">Contact Us</h2>
+    <form method="post" action="/contact">
+      {% csrf_token %}
+    <div class="mb-3">
+        <label for="name" class="form-label">Name </label>
+        <input type="text" class="form-control" id="Name"name="name" placeholder="Enter Your Name">
+      </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1"name="email" placeholder="Enter Your Email Adress">
+      </div>
+      <div class="mb-3">
+        <label for="phone" class="form-label">Phone No </label>
+        <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter Your Phone Number">
+      </div>
+      <div class="mb-3">
+        <label for="desc" class="form-label">Contact us for</label>
+        <textarea class="form-control" id="desc" rows="3" name="desc"></textarea>
+      </div>
+      <button type="submit"class="btn btn-primary btn-lg">Submit</button>
+</div>
+</form>
+{% include "vehicle/footer.html" %}
+{% endblock body %}

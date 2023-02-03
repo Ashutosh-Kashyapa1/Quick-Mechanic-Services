@@ -1,0 +1,23 @@
+{% extends 'vehicle/base.html' %}
+{% block title %}Book For On Spot Service
+{% endblock title %}
+{% block body %} 
+  <center>
+    <h1 class='alert alert-success' style="margin-bottom:0px;">Book For On Spot Service !</h1>
+  </center><br>
+  <div class="jumbotron" style="margin-bottom: 0px;margin-top: 0px;">
+      <center>
+    <h6 class="display-7"> 24/7 On-Spot Breakdown Support </h6><br>
+    <p class="lead">We Provide on spot mechanic services near by garage.</p>
+    <p class="lead">Door step and prebooking services are also available</p>
+    <br>
+    <hr class="my-4">
+    <p>Call Now For Onspot Booking</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="tel:4358686866" role="button">Call Now</a>
+    </p>
+    </center>
+  </div>
+  <br><br>
+  {% include "vehicle/footer.html" %}
+{% endblock body %}

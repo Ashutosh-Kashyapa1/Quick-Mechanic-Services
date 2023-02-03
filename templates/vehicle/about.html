@@ -1,0 +1,23 @@
+{% extends 'vehicle/base.html' %}
+{% block title %}About us
+{% endblock title %}
+{% block body %} 
+  <center>
+    <h1 class='alert alert-success' style="margin-bottom:0px;">About Quick Mechanic Service !</h1>
+  </center><br>
+  <div class="jumbotron" style="margin-bottom: 0px;margin-top: 0px;">
+      <center>
+    <h6 class="display-7"> 24/7 On-Spot Breakdown Support </h6><br>
+    <p class="lead">We Provide on spot mechanic services near by garage.</p>
+    <p class="lead">Door step and prebooking services are also available</p>
+    <br>
+    <hr class="my-4">
+    <p>Explore Our Website and Connect With Us</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="/" role="button">HOME</a>
+    </p>
+    </center>
+  </div>
+  <br><br>
+  {% include "vehicle/footer.html" %}
+{% endblock body %}

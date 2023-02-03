@@ -1,0 +1,108 @@
+
+{% extends 'vehicle/base.html' %}
+
+{% load static %}
+
+{% block title %}Home
+{% endblock title %}
+ 
+{% block body %} <div class="container-fluid px-0">
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'images/image21.jpg' %}" class="d-block w-100 " alt="...">
+        </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/image35.jpg' %}" class="d-block w-100 " alt="..."" class="d-block w-100 " alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/image22.jpg' %}" class="d-block w-100 " alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/image25.jpg' %}" class="d-block w-100 " alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/image28.jpg' %}" class="d-block w-100 " alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+</div>
+
+<div class="container-fluid">
+  <center>
+    <h3 class='alert alert-success my-2' style="margin-bottom:0px;">Our Services !</h3>
+  </center>
+</div>
+<div class="album py-3 bg-light">
+  <div class="container">
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="{% static 'images/image37.jpg' %}" class="d-block w-100 " alt="...">
+          <div class="card-body">
+            <p class="card-text">Get on spot services at any location 24x7 near by registered garage.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <div class="mx-2">
+                  <a class="btn btn-primary" href="/onspot-service" role="button">Book NOW</a>  
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="{% static 'images/image32.jpg' %}" class="d-block w-100 " alt="...">
+
+          <div class="card-body">
+            <p class="card-text">Get door step services for your car regular maintainence.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <div class="mx-2">
+                  <a class="btn btn-primary" href="/doorstep-service" role="button">Book NOW</a>  
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="{% static 'images/image42.jpg' %}" class="d-block w-100 " alt="...">
+          <div class="card-body">
+            <p class="card-text">Get pree booking dervice for car wash,tyre change and other services.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <div class="mx-2">
+                  <a class="btn btn-primary" href="/pre-booking-service" role="button">Book NOW</a>  
+                </div>
+                
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% include "vehicle/footer.html" %}
+
+{% endblock body %}
+
+

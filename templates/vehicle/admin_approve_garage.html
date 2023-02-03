@@ -1,0 +1,51 @@
+{% extends 'vehicle/adminbase.html' %}
+{% block content %}
+{% load static %}
+
+	
+	<div class="wrapper">
+
+
+		<div class="row">
+			<div class="col-12 col-m-12 col-sm-12">
+				<div class="card">
+					<div class="card-header">
+						<h3 style="color:red; text-align:center" >
+							Verified and Registered Garage
+						</h3>
+
+					</div>
+					<div class="card-content">
+						<table>
+							<thead>
+                <tr>
+                  <th>Garage Name</th>
+                  <th>Profile Picture</th>
+                  <th>Mobile Number</th>
+                  <th>Address</th>
+                  <th>Approve</th>
+                  <th>Delete</th>
+                </tr>
+							</thead>
+							<tbody>
+                {% for m in garages %}
+                <tr>
+                  <td> {{m.get_name}}</td>
+                  <td> <img src="{% static m.profile_pic.url %}" alt="Profile Pic" height="40px" width="40px" /></td>
+                  <td>{{m.mobile}}</td>
+                  <td>{{m.address}}</td>
+                  <td><a  style="color:red; text-decoration:none;font-size:25px;" href="{% url 'approve-garage' m.id  %}">&#10004;</a></td>
+                  <td><a style="color:blue; text-decoration:none;font-size:25px;"href="{% url 'delete-garage' m.id  %}">&#10008;</a></td>
+                </tr>
+                {% endfor %}
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	</div>
+{% endblock content %}
